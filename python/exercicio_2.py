@@ -64,8 +64,8 @@ class ListaVoos:
 def menu():
     print("1. Reserva de bilhete")
     print("2. Cancelamento de bilhete")
-    print("3. Verificação de reserva por nome")
-    print("4. Exibição de passageiros")
+    print("3. Verificacao de reserva por nome")
+    print("4. Exibicao de passageiros")
     print("5. Sair")
 
 def main():
@@ -74,17 +74,17 @@ def main():
 
     while True:
         menu()
-        escolha = input("Escolha uma opção: ")
+        escolha = input("Escolha uma opcao: ")
 
         if escolha == "1":
-            numero_voo = input("Digite o número do voo: ")
+            numero_voo = input("Digite o numero do voo: ")
             voo = lista_voos.encontrar_voo(numero_voo)
             if voo:
                 nome_passageiro = input("Digite o nome do passageiro: ")
                 voo.passageiros.adicionar_passageiro(nome_passageiro)
                 print("Bilhete reservado com sucesso.")
             else:
-                print("Voo não encontrado.")
+                print("Voo nao encontrado.")
         elif escolha == "2":
             # Implementação do cancelamento de bilhete
             pass
@@ -103,7 +103,7 @@ def main():
             print("Saindo do programa.")
             break
         else:
-            print("Opção inválida. Por favor, escolha novamente.")
+            print("Opcao invalida. Por favor, escolha novamente.")
 
 if __name__ == "__main__":
     main()
